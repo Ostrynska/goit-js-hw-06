@@ -8,7 +8,6 @@ const ingredients = [
 ];
 
 const navEl = document.querySelector('#ingredients');
-  // navEl.textContent = `Ingredients:`;
 
 const elements = ingredients.map(ingredient =>
 {
@@ -19,7 +18,6 @@ const elements = ingredients.map(ingredient =>
   return listEl;
 });
 
-console.log(elements);
+// console.log(elements);
 navEl.append(...elements);
-
 // console.log(navEl.children);
