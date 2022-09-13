@@ -9,15 +9,19 @@ const ingredients = [
 
 const navEl = document.querySelector('#ingredients');
 
-const elements = ingredients.map(ingredient =>
-{
-  const listEl = document.createElement('li');
-  listEl.textContent = ingredient;
-  listEl.classList.add('item');
+const elements = ingredients
+  .map(ingredient => `<li class="item">${ingredient}</li>`)
+  .join('');
 
-  return listEl;
-});
+// ------ OR --------
+// const elements = ingredients.map(ingredient => {
+//   const listEl = document.createElement('li');
+//   listEl.textContent = ingredient;
+//   listEl.classList.add('item');
 
-// console.log(elements);
-navEl.append(...elements);
-// console.log(navEl.children);
+//   return listEl;
+// });
+// navEl.append(...elements);
+
+navEl.insertAdjacentHTML('beforeend', elements);
+console.log(navEl);
