@@ -15,8 +15,11 @@ const images = [
 
 const navEl = document.querySelector('.gallery');
 
-const elements = images.map((image) => `<li class="gallery-item"><img class="gallery-img" 
-src="${image.url}" alt="${image.alt}" width=${420} height=${250}></img></li>`).join("");
+const elements = images
+  .map(
+    image => `<li class="gallery-item"><img class="gallery-img" 
+src="${image.url}" alt="${image.alt}" width=${420} height=${250}></img></li>`
+  )
+  .join('');
 
-navEl.insertAdjacentHTML("beforeend", elements);
-
+navEl.insertAdjacentHTML('beforeend', elements);

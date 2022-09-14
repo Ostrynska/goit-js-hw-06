@@ -4,7 +4,7 @@ const refs = {
 };
 
 refs.range.value = 16;
-refs.range.addEventListener('change', onInputChange);
+refs.range.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
   refs.text.style.fontSize = refs.range.value + 'px';
